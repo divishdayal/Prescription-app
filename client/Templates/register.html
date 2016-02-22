@@ -1,0 +1,95 @@
+<template name = "register">
+
+<body style = "background-color : rgb(230,229,229)">
+
+	<section>
+
+		<div class = "section-body container">
+			<div class="row z-depth-3" style = "background-color:white;margin-top:50px;">
+			    <form id="register-form" class="col s12" style = "padding: 0px 25px 0px 25px;">
+			      <div class="row" style = "margin-top:20px;">
+			        <div class="input-field col s6">
+			         <input name="first" id="first_name" type="text" class="validate inputR">
+			          <label for="first_name">First Name</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input name="last" id="last_name" type="text" class="validate inputR">
+			          <label for="last_name">Last Name</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input name="username" id="username" type="text" class="validate inputR">
+			          <label for="username">Username</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input name="email" id="email" type="email" class="validate inputR">
+			          <label for="email" data-error="wrong" data-success="right">Primary Email</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input name="password" id="password" type="password" class="validate inputR">
+			          <label for="password">Password</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input id="c-password" type="password" class="validate inputR">
+			          <label for="c-password">Confirm Password</label>
+			        </div>
+			      </div>
+
+			       <div class="row">
+			        <div class="input-field col s6">
+			          <input name="mobile" id="mobile-no" type="number" class="validate inputR">
+			          <label for="mobile-no">Mobile Number</label>
+			        </div>
+			        <div class="input-field col s6">
+			            <input name="date" type="date" class="datepicker inputR" id = "dob">
+			            <label for="dob">Date of Birth</label>
+			        </div>
+			      </div>
+			      <input name="group1" type="radio" id="patient" value="patient" />
+      			  <label for="patient">Patient</label>
+      			  <input name="group1" type="radio" id="doctor" value="doctor" />
+      			  <label for="doctor">Doctor</label>
+              <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
+        			margin-bottom: 20px;margin-top:10px;">Submit
+     				 </button>
+			    </form>
+
+
+  			</div>
+
+
+		</div>
+
+	</section>
+
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+
+
+    <script type="text/javascript">
+$(document).ready(function(){
+	$(".button-collapse").sideNav();
+	 $('.modal-trigger').leanModal();
+	 $('.datepicker').pickadate({
+    selectMonths: true,
+    selectYears: 200
+  });
+
+
+});
+
+
+</script>
+
+</body>
+</template>

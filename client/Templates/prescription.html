@@ -1,0 +1,223 @@
+<template name="prescription">
+
+<body>
+			<nav>
+			    <div class="nav-wrapper red lighten-2">
+			      <a href="#!" class="brand-logo"></a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="patient-details.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="collapsible.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+			      </ul>
+			    </div>
+		  </nav>
+	<section>
+		<div class = "section-body container">
+			<div class = "prescription-body card">
+				<div class = "doctor-info">
+					<div class = "col s12 m6">
+
+							<span class = "doctor-name">Dr. Sony Mishra</span><br>
+							<span class = "doctor-qualifications">BDS , MDS , PGDE (Cosmetic & Esthetic Dentist)</span><br>
+							<span class = "doctor-specialty">Dentist , Dental Surgeon , 14 Years Experience</span><br>
+							<span class = "doctor-clinic-name">Smilekraft Dental Clinic</span><br>
+							<span class = "doctor-clinic-address">First Floor, C-660, New Friends Colony,<br> New Delhi-110025, <br>Delhi<br></span>
+					</div>
+
+				</div>
+				<div class="divider red lighten-2"></div>
+
+				<div class = "prescription-body row">
+					<div class = "diagnosed-disease col s3">
+
+						<input type="text" data-provide="typeahead" placeholder = "Diagnosed Disease" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details">
+						<br>
+						<br>
+						<br>
+						<input type = "text" placeholder = "Lab test recommended">
+					</div>
+					<div class = "vertical-divider col s1"></div>
+					<div class = "prescription-main-body col s8">
+						<div class = "patient-info row">
+							<div class="input-field col s6">
+          						<input value="Divakar" id="first_name" type="text" class="validate">
+         						 <label for="first_name">First Name</label>
+
+        					</div>
+        					<div class="input-field col s6">
+          						<input value="Verma" id="last_name" type="text" class="validate">
+         						 <label for="last_name">Last Name</label>
+
+        					</div>
+        					<div class="input-field col s2">
+          						<input value="19" id="age" type="text" class="validate">
+         						 <label for="age">Age</label>
+        					</div>
+        					<div class="input-field col s2">
+          						<input value="82" id="weight" type="text" class="validate">
+         						 <label for="weight">Weight</label>
+        					</div>
+
+						</div>
+						<div class="prescription-main-body-divider divider red lighten-2"></div>
+						<div class = "prescribed-medication">
+							<div class = "medicine row">
+								<div class = "row">
+									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+		          						<input id="medicine-1" type="text" class="validate" >
+		          						<label for="medicine-1" title="Details of Drug">Medicine Name</label>
+
+		       						 </div>
+		       						 <div class = "input-field col s6">
+			       						 <input type="checkbox" class="filled-in" id="med-1-morning" checked="checked" />
+			      						<label for="med-1-morning">Morning</label>
+			      						<input type="checkbox" class="filled-in" id="med-1-afternoon" checked="checked" />
+			      						<label for="med-1-afternoon">Afternoon</label>
+			      						<input type="checkbox" class="filled-in" id="med-1-evening" checked="checked" />
+			      						<label for="med-1-evening">Evening</label>
+		      						</div>
+		      					</div>
+		      					<div class = "row">
+		      						<div class = "input-field col s2 offset-s6">
+		      							<input name="med-1-group1" type="radio" id="med-1-AM" />
+	      								<label for="med-1-AM">AM</label>
+	      								<input name="med-1-group1" type="radio" id="med-1-BM" />
+	      								<label for="med-1-BM">BM</label>
+		      						</div>
+		      						<div class = "input-field col s3">
+		      							<input name="med-1-group2" type="radio" id="med-1-dose-1" />
+	      								<label for="med-1-dose-1">1</label>
+	      								<input name="med-1-group2" type="radio" id="med-1-dose-2" />
+	      								<label for="med-1-dose-2">2</label>
+	      								<input name="med-1-group2" type="radio" id="med-1-dose-3" />
+	      								<label for="med-1-dose-3">3</label>
+
+		      						</div>
+		      					</div>
+	      					</div>
+
+	      					<div class = "medicine row">
+								<div class = "row">
+									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+		          						<input id="medicine-2" type="text" class="validate">
+		          						<label for="medicine-2" title="Details of Drug">Medicine Name</label>
+		       						 </div>
+		       						 <div class = "input-field col s6">
+			       						 <input type="checkbox" class="filled-in" id="med2-morning" checked="checked" />
+			      						<label for="med2-morning">Morning</label>
+			      						<input type="checkbox" class="filled-in" id="med2-afternoon" checked="checked" />
+			      						<label for="med2-afternoon">Afternoon</label>
+			      						<input type="checkbox" class="filled-in" id="med2-evening" checked="checked" />
+			      						<label for="med2-evening">Evening</label>
+		      						</div>
+		      					</div>
+		      					<div class = "row">
+		      						<div class = "input-field col s2 offset-s6">
+		      							<input name="med2-group1" type="radio" id="med2-AM" />
+	      								<label for="med2-AM">AM</label>
+	      								<input name="med2-group1" type="radio" id="med2-BM" />
+	      								<label for="med2-BM">BM</label>
+		      						</div>
+		      						<div class = "input-field col s3">
+		      							<input name="med2-group2" type="radio" id="med2-dose-1" />
+	      								<label for="med2-dose-1">1</label>
+	      								<input name="med2-group2" type="radio" id="med2-dose-2" />
+	      								<label for="med2-dose-2">2</label>
+	      								<input name="med2-group2" type="radio" id="med2-dose-3" />
+	      								<label for="med2-dose-3">3</label>
+
+		      						</div>
+		      					</div>
+	      					</div>
+
+	      					<div class = "medicine row">
+								<div class = "row">
+									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details" >
+		          						<input id="medicine-3" type="text" class="validate">
+		          						<label for="medicine-3" title="Details of Drug">Medicine Name</label>
+		       						 </div>
+		       						 <div class = "input-field col s6">
+			       						 <input type="checkbox" class="filled-in" id="med3-morning" checked="checked" />
+			      						<label for="med3-morning">Morning</label>
+			      						<input type="checkbox" class="filled-in" id="med3-afternoon" checked="checked" />
+			      						<label for="med3-afternoon">Afternoon</label>
+			      						<input type="checkbox" class="filled-in" id="med3-evening" checked="checked" />
+			      						<label for="med3-evening">Evening</label>
+		      						</div>
+		      					</div>
+		      					<div class = "row">
+		      						<div class = "input-field col s2 offset-s6">
+		      							<input name="med3-group1" type="radio" id="med3-AM" />
+	      								<label for="med3-AM">AM</label>
+	      								<input name="med3-group1" type="radio" id="med3-BM" />
+	      								<label for="med3-BM">BM</label>
+		      						</div>
+		      						<div class = "input-field col s3">
+		      							<input name="med3-group2" type="radio" id="med3-dose-1" />
+	      								<label for="med3-dose-1">1</label>
+	      								<input name="med3-group2" type="radio" id="med3-dose-2" />
+	      								<label for="med3-dose-2">2</label>
+	      								<input name="med3-group2" type="radio" id="med3-dose-3" />
+	      								<label for="med3-dose-3">3</label>
+
+		      						</div>
+		      					</div>
+	      					</div>
+
+	      					<div class = "medicine row">
+								<div class = "row">
+									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+		          						<input id="medicine-4" type="text" class="validate">
+		          						<label for="medicine-4" title="Details of Drug">Medicine Name</label>
+		       						 </div>
+		       						 <div class = "input-field col s6">
+			       						 <input type="checkbox" class="filled-in" id="med4-morning" checked="checked" />
+			      						<label for="med4-morning">Morning</label>
+			      						<input type="checkbox" class="filled-in" id="med4-afternoon" checked="checked" />
+			      						<label for="med4-afternoon">Afternoon</label>
+			      						<input type="checkbox" class="filled-in" id="med4-evening" checked="checked" />
+			      						<label for="med4-evening">Evening</label>
+		      						</div>
+		      					</div>
+		      					<div class = "row">
+		      						<div class = "input-field col s2 offset-s6">
+		      							<input name="med4-group1" type="radio" id="med4-AM" />
+	      								<label for="med4-AM">AM</label>
+	      								<input name="med4-group1" type="radio" id="med4-BM" />
+	      								<label for="med4-BM">BM</label>
+		      						</div>
+		      						<div class = "input-field col s3">
+		      							<input name="med4-group2" type="radio" id="med4-dose-1" />
+	      								<label for="med4-dose-1">1</label>
+	      								<input name="med4-group2" type="radio" id="med4-dose-2" />
+	      								<label for="med4-dose-2">2</label>
+	      								<input name="med4-group2" type="radio" id="med4-dose-3" />
+	      								<label for="med4-dose-3">3</label>
+
+		      						</div>
+		      					</div>
+	      					</div>
+
+	      				<a class="btn-floating waves-effect waves-light red" id = "add-med-field"><i class="material-icons">add</i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+
+</body>
+
+</template>

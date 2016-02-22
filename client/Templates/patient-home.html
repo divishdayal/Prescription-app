@@ -1,0 +1,104 @@
+<template name="patientHome">
+
+<body style = "background-color : rgb(230,229,229)">
+			<nav>
+			    <div class="nav-wrapper red lighten-2">
+			      <a href="#!" class="brand-logo"></a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="patient-details.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="collapsible.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+			      </ul>
+			    </div>
+		  </nav>
+	<section>
+
+		<div class = "section-body container">
+			<h3 style = "margin-top:50px;">Welcome,<span class="patient-name">Divakar Verma</span></h3>
+			 <table style = "margin-top:50px;" class = "bordered highlight centered responsive-table white z-depth-3">
+		        <thead>
+		          <tr>
+		              <th data-field="s.no">S.no</th>
+		              <th data-field="name">Doctor's Name</th>
+		              <th data-field="date">Date</th>
+		              <th data-field="disease">Disease</th>
+		              <th data-field="open-prescription">Prescription</th>
+		          </tr>
+		        </thead>
+
+		        <tbody>
+		          <tr>
+		            <td>1</td>
+		            <td>Dr.Sony Mishra</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
+		          <tr>
+		            <td>2</td>
+		            <td>Dr.Sony Mishra</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
+		          <tr>
+		            <td>3</td>
+		            <td>Dr.Sony Mishra</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
+		          <tr>
+		            <td>4</td>
+		            <td>Dr.Sony Mishra</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
+		          <tr>
+		            <td>5</td>
+		            <td>Dr.Sony Mishra</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
+
+		        </tbody>
+		     </table>
+
+
+
+
+		</div>
+
+	</section>
+
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+
+
+    <script type="text/javascript">
+$(document).ready(function(){
+	$(".button-collapse").sideNav();
+	 $('.modal-trigger').leanModal();
+
+});
+
+
+</script>
+
+</body>
+</template>

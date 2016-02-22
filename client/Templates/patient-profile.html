@@ -1,0 +1,241 @@
+<template name="patientProfile">
+
+<body style = "background-color : rgb(230,229,229)">
+			<nav>
+			    <div class="nav-wrapper red lighten-2">
+			      <a href="#!" class="brand-logo"></a>
+			      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			      <ul class="right hide-on-med-and-down">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="patient-details.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+
+			      </ul>
+			      <ul class="side-nav" id="mobile-demo">
+
+			        <li><a href="patient-account.html">Your Medical Records</a></li>
+			        <li><a href="collapsible.html">Medical Details</a></li>
+			        <li><a href="collapsible.html">Logout</a></li>
+			      </ul>
+			    </div>
+		  </nav>
+	<section>
+
+		<div class = "section-body container">
+			<div class="row z-depth-3" style = "background-color:white;margin-top:50px;">
+			    <form class="col s12" style = "padding: 0px 25px 0px 25px;">
+			      <div class="row" style = "margin-top:20px;">
+			        <div class="input-field col s6">
+			          <input value= "Divakar" placeholder="Placeholder" id="first_name" type="text" class="validate">
+			          <label for="first_name">First Name</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input value = "Verma" id="last_name" type="text" class="validate">
+			          <label for="last_name">Last Name</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input id="username" type="text" class="validate">
+			          <label for="username">Username</label>
+			        </div>
+			        <div class="input-field col s6">
+			          <input id="email" type="email" class="validate">
+			          <label for="email" data-error="wrong" data-success="right">Primary Email</label>
+			        </div>
+			      </div>
+
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input id="password" type="password" class="validate">
+			          <label for="password">Password</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s6">
+			          <input id="c-password" type="password" class="validate">
+			          <label for="c-password">Confirm Password</label>
+			        </div>
+			      </div>
+
+			       <div class="row">
+			        <div class="input-field col s6">
+			          <input id="mobile-no" type="number" class="validate">
+			          <label for="mobile-no">Mobile Number</label>
+			        </div>
+			        <div class="input-field col s6">
+			            <input type="date" class="datepicker" id = "dob">
+			            <label for="dob">Date of Birth</label>
+			        </div>
+			      </div>
+
+			      <h4>Allergies and Health</h4>
+			      <h6>Do you have, or have you ever had, any of the following:</h6>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Asthma</span>
+   						</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="asthma-yes" name = "asthma" />
+	      				<label for="asthma-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="asthma-no" name = "asthma" checked />
+	      				<label for="asthma-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Diabetes</span>
+   						</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="diabetes-yes" name = "diabetes" />
+	      				<label for="diabetes-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="diabetes-no" name = "diabetes" checked />
+	      				<label for="diabetes-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Heart Problems</span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="HeartProblems-yes" name = "HeartProblems" />
+	      				<label for="HeartProblems-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="HeartProblems-no" name = "HeartProblems" checked />
+	      				<label for="HeartProblems-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Periods of unconsciousness/dizzyness</span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="dizzyness-yes" name = "dizzyness" />
+	      				<label for="dizzyness-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="dizzyness-no" name = "dizzyness" checked />
+	      				<label for="dizzyness-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Joint or bone problems </span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="Joint-yes" name = "Joint" />
+	      				<label for="Joint-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="Joint-no" name = "Joint" checked />
+	      				<label for="Joint-no">No</label>
+
+      				</div>
+			      </div>
+			       <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Epilepsy </span>
+   					</div>
+   						<div class = "col s3">
+				      	<input type="radio" id="Epilepsy-yes" name = "Epilepsy" />
+	      				<label for="Epilepsy-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="Epilepsy-no" name = "Epilepsy" checked />
+	      				<label for="Epilepsy-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Chest pains </span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="Chest-yes" name = "Chest" />
+	      				<label for="Chest-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="Chest-no" name = "Chest" checked />
+	      				<label for="Chest-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> High blood pressure </span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="BP-yes" name = "BP" />
+	      				<label for="BP-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="BP-no" name = "BP" checked />
+	      				<label for="BP-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class = "row" style = "margin-top:20px;">
+			      	<div class = "col s8">
+			      		<span style = "font-size:1.2rem; color : #424242; margin:0px 10px 5px 20px;
+   						font-weight: 500;"> Are you regularly taking any medication? </span>
+   					</div>
+   					<div class = "col s3">
+				      	<input type="radio" id="regmed-yes" name = "regmed" />
+	      				<label for="regmed-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" id="regmed-no" name = "regmed" checked />
+	      				<label for="regmed-no">No</label>
+
+      				</div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s11" style = "margin-left: 20px;">
+			          <textarea id="textarea1" class="materialize-textarea"></textarea>
+			          <label for="textarea1">If ‘Yes’, what is it and what is it for?</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s11" style = "margin-left: 20px;">
+			          <textarea id="textarea2" class="materialize-textarea"></textarea>
+			          <label for="textarea2">Known Allergies (Please State)</label>
+			        </div>
+			      </div>
+			    </form>
+			    <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
+    			margin-bottom: 20px;">Submit
+    				<i class="material-icons right">send</i>
+ 				 </button>
+
+  			</div>
+
+
+		</div>
+
+	</section>
+
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+
+
+    <script type="text/javascript">
+$(document).ready(function(){
+	$(".button-collapse").sideNav();
+	 $('.modal-trigger').leanModal();
+	 $('.datepicker').pickadate({
+    selectMonths: true,
+    selectYears: 200
+  });
+
+
+});
+
+
+</script>
+
+</body>
+</template>
