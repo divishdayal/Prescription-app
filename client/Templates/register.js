@@ -2,16 +2,16 @@ Template.register.events({
  'submit #register-form': function(e, template) {
    e.preventDefault();
 
-   var flag = 0;
-   $(".inputR").each(function() {
-  if(flag==0 && $(this).val() === ""){
-   throwError("Empty Fields!");
-   flag=1;
- }
-});
-   if(flag==1){
-     console.log("error");
-     return;}
+//    var flag = 0;
+//    $(".inputR").each(function() {
+//   if(flag==0 && $(this).val() === ""){
+//    throwError("Empty Fields!");
+//    flag=1;
+//  }
+// });
+//    if(flag==1){
+//      console.log("error");
+//      return;}
 
      var $regexname=/\d\d\d\d\d\d\d\d\d\d/;
      var first= $(e.target).find('[name=first]').val();
@@ -54,12 +54,17 @@ Template.register.events({
 
        });
 
+    // while(!Meteor.user() || Meteor.loggingIn())
+    //   this.render('loading');
 
-    if(Meteor.user().profile.type === "doctor")
-      Router.go('/doctor_registration');
-    else {
-        Router.go('/patient_profile')
-    }
+        if(Meteor.user().profile.type === "doctor")
+          Router.go('/doctor_registration');
+        else {
+            Router.go('/patient_profile')
+        }
+
+
+
 
  }
 //}

@@ -7,13 +7,14 @@
 		<div class = "section-body container">
 			<div class="row z-depth-3" style = "background-color:white;margin-top:50px;">
 			    <form class="col s12" style = "padding: 0px 25px 0px 25px;">
+            {{#if isRegistering}}
 			      <div class="row" style = "margin-top:20px;">
 			        <div class="input-field col s6">
-			          <input value= "{{currentUser.profile.name}}" placeholder="Placeholder" id="first_name" type="text" class="validate">
+			          <input value= "{{currentUser.profile.first_name}}" placeholder="Placeholder" id="first_name" type="text" class="validate">
 			          <label for="first_name">First Name</label>
 			        </div>
 			        <div class="input-field col s6">
-			          <input value = "Verma" id="last_name" type="text" class="validate">
+			          <input value = "{{currentUser.profile.last_name}}" id="last_name" type="text" class="validate">
 			          <label for="last_name">Last Name</label>
 			        </div>
 			      </div>
@@ -28,7 +29,7 @@
 			        </div>
 			      </div>
 
-			      <div class="row">
+			      <!-- <div class="row">
 			        <div class="input-field col s6">
 			          <input id="password" type="password" class="validate">
 			          <label for="password">Password</label>
@@ -39,7 +40,7 @@
 			          <input id="c-password" type="password" class="validate">
 			          <label for="c-password">Confirm Password</label>
 			        </div>
-			      </div>
+			      </div> -->
 
 			       <div class="row">
 			        <div class="input-field col s6">
@@ -51,7 +52,7 @@
 			            <label for="dob">Date of Birth</label>
 			        </div>
 			      </div>
-
+            {{/if}}
 			      <h4>Allergies and Health</h4>
 			      <h6>Do you have, or have you ever had, any of the following:</h6>
 			      <div class = "row" style = "margin-top:20px;">
