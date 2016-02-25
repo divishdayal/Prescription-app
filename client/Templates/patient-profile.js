@@ -36,6 +36,9 @@ Template.patientProfile.helpers({
   textArea2: function(){
     var string = Meteor.user().profile.patient.textArea2;
     return string;
+  },
+  isEdit : function(){
+    return (Meteor.user().profile.patient.textArea1 || Meteor.user().profile.patient.textArea2);
   }
 });
 

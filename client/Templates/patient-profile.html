@@ -2,6 +2,7 @@
 
 <body style = "background-color : rgb(230,229,229)">
 			{{> nav}}
+
 	<section>
 
 		<div class = "section-body container">
@@ -234,7 +235,21 @@
 
       				</div>
 			      </div>
+						{{#if isEdit}}
 			      <div class="row">
+			        <div class="input-field col s11" style = "margin-left: 20px;">
+			          <input type="text" value = "{{textArea1}}"   name = "textArea1" id="textArea1"  class="materialize-textarea" >
+			          <label class="active" for="textarea1">If ‘Yes’, what is it and what is it for?</label>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="input-field col s11" style = "margin-left: 20px;">
+			          <input type="text" value="{{textArea2}}"  name = "textArea2" id="textArea2" class="materialize-textarea" >
+			          <label class="active" for="textarea2">Known Allergies (Please State)</label>
+			        </div>
+			      </div>
+						{{else}}
+						<div class="row">
 			        <div class="input-field col s11" style = "margin-left: 20px;">
 			          <input type="text" value = "{{textArea1}}"   name = "textArea1" id="textArea1"  class="materialize-textarea" >
 			          <label for="textarea1">If ‘Yes’, what is it and what is it for?</label>
@@ -246,7 +261,7 @@
 			          <label for="textarea2">Known Allergies (Please State)</label>
 			        </div>
 			      </div>
-
+						{{/if}}
 						<button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
 	    			margin-bottom: 20px;">Submit
 	    				<i class="material-icons right">send</i>

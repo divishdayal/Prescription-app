@@ -1,0 +1,223 @@
+<template name="showPrescription">
+  {{> nav}}
+
+    {{> prescriptionDisabled}}
+
+</template>
+
+<template name="prescriptionDisabled">
+
+
+  	<section>
+  		<div class = "section-body container">
+  			<div class = "prescription-body card">
+  				<div class = "doctor-info">
+  					<div class = "col s12 m6">
+
+  							<span class = "doctor-name">{{name}}</span><br>
+  							<span class = "doctor-qualifications">{{qualifications}}</span><br>
+  							<span class = "doctor-specialty">{{specialty}}</span><br>
+  							<span class = "doctor-clinic-name">{{address}}</span><br>
+  							<!-- <span class = "doctor-clinic-address">First Floor, C-660, New Friends Colony,<br> New Delhi-110025, <br>Delhi<br></span> -->
+  					</div>
+
+  				</div>
+  				<form id="prescription-form">
+  				<div class="divider red lighten-2"></div>
+
+  				<div class = "prescription-body row">
+  					<div class = "diagnosed-disease col s3">
+
+  						<input value="{{disease}}" id="prescribed-disease" name="prescribed-disease" type="text" data-provide="typeahead" placeholder = "none" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details" disabled>
+              <label class="active" for="prescribed-disease">Disease</label>
+              <br>
+  						<br>
+  						<br>
+  						<input value="{{lab_tests}}" id="lab-test" type = "text" name="lab-test" placeholder = "none" disabled>
+              <label class="active" for="lab-test">Lab tests recommended</label>
+  					</div>
+  					<div class = "vertical-divider col s1"></div>
+  					<div class = "prescription-main-body col s8">
+  						<div class = "patient-info row">
+  							<div class="input-field col s6">
+            						<input value="{{fname}}" name="f_name" id="first_name" type="text" class="validate" disabled>
+           						 <label class="active" for="first_name">First Name</label>
+
+          					</div>
+          					<div class="input-field col s6">
+            						<input value="{{lname}}" name="l_name" id="last_name" type="text" class="validate" disabled>
+           						 <label class="active" for="last_name">Last Name</label>
+
+          					</div>
+          					<div class="input-field col s2">
+            						<input value="{{age}}" name="age" id="age" type="text" class="validate" disabled>
+           						 <label class="active" for="age">Age</label>
+          					</div>
+          					<div class="input-field col s2">
+            						<input value="{{weight}}" name="weight" id="weight" type="text" class="validate" disabled>
+           						 <label class="active" for="weight">Weight</label>
+          					</div>
+
+  						</div>
+  						<div class="prescription-main-body-divider divider red lighten-2"></div>
+  						<div class = "prescribed-medication">
+  							<div class = "medicine row">
+  								<div class = "row">
+  									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+  		          						<input name="med1" id="medicine-1" type="text" class="validate" value="{{med1_name}}"  disabled>
+  		          						<label class="active" for="medicine-1" title="Details of Drug">Medicine Name</label>
+
+  		       						 </div>
+  		       						 <div class = "input-field col s6">
+  			       						<input name="med1-morning" value="morning" type="checkbox" class="filled-in" id="med-1-morning"
+                          {{med1Morning}}  disabled/>
+  			      						<label class="active" for="med-1-morning">Morning</label>
+  			      						<input name="med1-afternoon" value="afternoon" type="checkbox" class="filled-in" id="med-1-afternoon" checked={{med1Afternoon}}  disabled/>
+  			      						<label class="active" for="med-1-afternoon">Afternoon</label>
+  			      						<input name="med1-evening" value="evening" type="checkbox" class="filled-in" id="med-1-evening" checked={{med1Evening}}  disabled/>
+  			      						<label class="active" for="med-1-evening">Evening</label>
+  		      						</div>
+  		      					</div>
+  		      					<div class = "row">
+  		      						<div class = "input-field col s2 offset-s6">
+  		      							<input value="med1-am" name="med1-group1" type="radio" id="med-1-AM"  disabled {{med1am}}/>
+  	      								<label class="active" for="med-1-AM">AM</label>
+  	      								<input value="med1-bm" name="med1-group1" type="radio" id="med-1-BM"  disabled {{med1bm}}/>
+  	      								<label class="active" for="med-1-BM">BM</label>
+  		      						</div>
+  		      						<div class = "input-field col s3">
+  		      							<input value="med1-1" name="med1-group2" type="radio" id="med-1-dose-1"  disabled {{med11}}/>
+  	      								<label class="active" for="med-1-dose-1">1</label>
+  	      								<input value="med1-2" name="med1-group2" type="radio" id="med-1-dose-2"  disabled {{med12}}/>
+  	      								<label class="active" for="med-1-dose-2">2</label>
+  	      								<input value="med1-2"  name="med1-group2" type="radio" id="med-1-dose-3"  disabled {{med13}}/>
+  	      								<label class="active" for="med-1-dose-3">3</label>
+
+  		      						</div>
+  		      					</div>
+  	      					</div>
+
+  									<div class = "medicine row">
+  									  <div class = "row">
+  									    <div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+  									            <input name="med2" id="medicine-1" type="text" class="validate" value="{{med2_name}}" disabled>
+  									            <label class="active" for="medicine-1" title="Details of Drug">Medicine Name</label>
+
+  									         </div>
+  									         <div class = "input-field col s6">
+  									          <input name="med2-morning" value="morning" type="checkbox" class="filled-in" id="med2-morning" checked={{med2Morning}}  disabled/>
+  									          <label class="active" for="med2-morning">Morning</label>
+  									          <input name="med2-afternoon" value="afternoon" type="checkbox" class="filled-in" id="med2-afternoon" checked={{med2Afternoon}}  disabled/>
+  									          <label class="active" for="med2-afternoon">Afternoon</label>
+  									          <input name="med2-evening" value="evening" type="checkbox" class="filled-in" id="med2-evening" checked={{med2Evening}}  disabled/>
+  									          <label class="active" for="med2-evening">Evening</label>
+  									        </div>
+  									      </div>
+  									      <div class = "row">
+  									        <div class = "input-field col s2 offset-s6">
+  									          <input value="med2-am" name="med2-group1" type="radio" id="med2-AM"  disabled {{med2am}}/>
+  									          <label class="active" for="med2-AM">AM</label>
+  									          <input value="med2-bm" name="med2-group1" type="radio" id="med2-BM"  disabled {{med2bm}}/>
+  									          <label class="active" for="med2-BM">BM</label>
+  									        </div>
+  									        <div class = "input-field col s3">
+  									          <input value="med2-1" name="med2-group2" type="radio" id="med2-dose-1"  disabled {{med21}}/>
+  									          <label class="active" for="med2-dose-1">1</label>
+  									          <input value="med2-2" name="med2-group2" type="radio" id="med2-dose-2"  disabled {{med22}}/>
+  									          <label class="active" for="med2-dose-2">2</label>
+  									          <input value="med2-2"  name="med2-group2" type="radio" id="med2-dose-3"  disabled {{med23}}/>
+  									          <label class="active" for="med2-dose-3">3</label>
+
+  									        </div>
+  									      </div>
+  									    </div>
+
+  	      					<!-- <div class = "medicine row">
+  								<div class = "row">
+  									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details" >
+  		          						<input id="medicine-3" type="text" class="validate">
+  		          						<label class="active" for="medicine-3" title="Details of Drug">Medicine Name</label>
+  		       						 </div>
+  		       						 <div class = "input-field col s6">
+  			       						 <input type="checkbox" class="filled-in" id="med3-morning" checked="checked" />
+  			      						<label class="active" for="med3-morning">Morning</label>
+  			      						<input type="checkbox" class="filled-in" id="med3-afternoon" checked="checked" />
+  			      						<label class="active" for="med3-afternoon">Afternoon</label>
+  			      						<input type="checkbox" class="filled-in" id="med3-evening" checked="checked" />
+  			      						<label class="active" for="med3-evening">Evening</label>
+  		      						</div>
+  		      					</div>
+  		      					<div class = "row">
+  		      						<div class = "input-field col s2 offset-s6">
+  		      							<input name="med3-group1" type="radio" id="med3-AM" />
+  	      								<label class="active" for="med3-AM">AM</label>
+  	      								<input name="med3-group1" type="radio" id="med3-BM" />
+  	      								<label class="active" for="med3-BM">BM</label>
+  		      						</div>
+  		      						<div class = "input-field col s3">
+  		      							<input name="med3-group2" type="radio" id="med3-dose-1" />
+  	      								<label class="active" for="med3-dose-1">1</label>
+  	      								<input name="med3-group2" type="radio" id="med3-dose-2" />
+  	      								<label class="active" for="med3-dose-2">2</label>
+  	      								<input name="med3-group2" type="radio" id="med3-dose-3" />
+  	      								<label class="active" for="med3-dose-3">3</label>
+
+  		      						</div>
+  		      					</div>
+  	      					</div> -->
+
+  	      					<!-- <div class = "medicine row">
+  								<div class = "row">
+  									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
+  		          						<input id="medicine-4" type="text" class="validate">
+  		          						<label class="active" for="medicine-4" title="Details of Drug">Medicine Name</label>
+  		       						 </div>
+  		       						 <div class = "input-field col s6">
+  			       						 <input type="checkbox" class="filled-in" id="med4-morning" checked="checked" />
+  			      						<label class="active" for="med4-morning">Morning</label>
+  			      						<input type="checkbox" class="filled-in" id="med4-afternoon" checked="checked" />
+  			      						<label class="active" for="med4-afternoon">Afternoon</label>
+  			      						<input type="checkbox" class="filled-in" id="med4-evening" checked="checked" />
+  			      						<label class="active" for="med4-evening">Evening</label>
+  		      						</div>
+  		      					</div>
+  		      					<div class = "row">
+  		      						<div class = "input-field col s2 offset-s6">
+  		      							<input name="med4-group1" type="radio" id="med4-AM" />
+  	      								<label class="active" for="med4-AM">AM</label>
+  	      								<input name="med4-group1" type="radio" id="med4-BM" />
+  	      								<label class="active" for="med4-BM">BM</label>
+  		      						</div>
+  		      						<div class = "input-field col s3">
+  		      							<input name="med4-group2" type="radio" id="med4-dose-1" />
+  	      								<label class="active" for="med4-dose-1">1</label>
+  	      								<input name="med4-group2" type="radio" id="med4-dose-2" />
+  	      								<label class="active" for="med4-dose-2">2</label>
+  	      								<input name="med4-group2" type="radio" id="med4-dose-3" />
+  	      								<label class="active" for="med4-dose-3">3</label>
+
+  		      						</div>
+
+  		      					</div>
+  	      					</div> -->
+
+  	      				<!-- <a class="btn-floating waves-effect waves-light red" id = "add-med-field"><i class="material-icons">add</i></a>
+  								<button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 10%;
+  								margin-bottom: 20px;margin-top:0%;">Submit
+  							 </button> -->
+  						</div>
+  					</div>
+  				</div>
+  			</form>
+  			</div>
+  		</div>
+
+  	</section>
+
+
+
+
+
+
+
+</template>

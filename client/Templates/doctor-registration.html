@@ -3,6 +3,7 @@
 
 <body style = "background-color : rgb(230,229,229)">
 	{{> nav}}
+	{{#if isEdit}}
 	<section>
 
 		<div class = "section-body container">
@@ -11,19 +12,19 @@
 			      <div class="row" style = "margin-top:20px;">
 			        <div class = "input-field cold s6">
 			        	 <input name="qualifications" type="text" class="validate inputT" value="{{Quals}}">
-         				 <label for="qualifications">Qualifications</label>
+         				 <label for="qualifications" class="active">Qualifications</label>
 			        </div>
 			    </div>
 			    <div class="row" style = "margin-top:20px;">
 			        <div class = "input-field cold s6">
 			        	 <input name="specialty" type="text" class="validate inputT" value = "{{specialty}}">
-         				 <label for="specialty">Doctor Specialty</label>
+         				 <label for="specialty" class="active">Doctor Specialty</label>
 			        </div>
 			    </div>
 			    <div class="row" style = "margin-top:20px;">
 			        <div class = "input-field cold s6">
 			        	 <input name="clinic-address" type="text" class="validate inputT" value="{{address}}">
-         				 <label for="clinic-address">Clinic Address</label>
+         				 <label for="clinic-address" class="active">Clinic Address</label>
 			        </div>
 			    </div>
 
@@ -40,7 +41,45 @@
 		</div>
 
 	</section>
+{{else}}
+<section>
 
+	<div class = "section-body container">
+		<div class="row z-depth-3" style = "background-color:white;margin-top:50px;">
+				<form class="col s12" id="doctor-form" style = "padding: 0px 25px 0px 25px;">
+					<div class="row" style = "margin-top:20px;">
+						<div class = "input-field cold s6">
+							 <input name="qualifications" type="text" class="validate inputT" value="{{Quals}}">
+							 <label for="qualifications" >Qualifications</label>
+						</div>
+				</div>
+				<div class="row" style = "margin-top:20px;">
+						<div class = "input-field cold s6">
+							 <input name="specialty" type="text" class="validate inputT" value = "{{specialty}}">
+							 <label for="specialty" >Doctor Specialty</label>
+						</div>
+				</div>
+				<div class="row" style = "margin-top:20px;">
+						<div class = "input-field cold s6">
+							 <input name="clinic-address" type="text" class="validate inputT" value="{{address}}">
+							 <label for="clinic-address" >Clinic Address</label>
+						</div>
+				</div>
+
+				<button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
+				margin-bottom: 20px;margin-top:10px;">Submit
+			 </button>
+
+				</form>
+
+
+			</div>
+
+
+	</div>
+
+</section>
+{{/if}}
 
 
 

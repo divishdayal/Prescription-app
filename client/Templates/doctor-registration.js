@@ -35,5 +35,9 @@ Template.doctorRegistration.helpers({
   },
   address: function(){
     return Meteor.user().profile.info.clinicAddress;
-  }
+  },
+	isEdit: function(){
+		return (Meteor.user().profile.info.qualifications || Meteor.user().profile.info.specialty
+		|| Meteor.user().profile.info.clinicAddress);
+	}
 });
