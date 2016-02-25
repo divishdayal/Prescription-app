@@ -54,8 +54,7 @@ Template.register.events({
 
        });
 
-    // while(!Meteor.user() || Meteor.loggingIn())
-    //   this.render('loading');
+
 
         if(Meteor.user().profile.type === "doctor")
           Router.go('/doctor_registration');

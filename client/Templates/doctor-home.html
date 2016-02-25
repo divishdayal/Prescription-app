@@ -19,48 +19,10 @@
 		        </thead>
 
 		        <tbody>
-		          <tr>
-		            <td>1</td>
-		            <td>Divakar</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>2</td>
-		            <td>Pranav</td>
-		            <td>12-Jan-2016</td>
-		            <td>Jattpana</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>3</td>
-		            <td>Divish</td>
-		            <td>16-Jan-2016</td>
-		            <td>Quit smoking</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>1</td>
-		            <td>Divakar</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>2</td>
-		            <td>Pranav</td>
-		            <td>12-Jan-2016</td>
-		            <td>Jattpana</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>3</td>
-		            <td>Divish</td>
-		            <td>16-Jan-2016</td>
-		            <td>Quit smoking</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
+							{{#each patients}}
+								{{> doc_table_row}}
+							{{/each}}
+
 		        </tbody>
 		     </table>
 
@@ -302,4 +264,14 @@ $(document).ready(function(){
 </script>
 
 </body>
+</template>
+
+<template name="doc_table_row">
+		          <tr>
+		            <td>1</td>
+		            <td>Divakar</td>
+		            <td>12-Dec-2015</td>
+		            <td>Lovaria</td>
+		            <td><a href = "#">Open</a></td>
+		          </tr>
 </template>

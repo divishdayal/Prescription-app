@@ -25,3 +25,15 @@ Template.doctorRegistration.events({
 	Router.go('/doctor_home');
 }
 });
+
+Template.doctorRegistration.helpers({
+  Quals: function(){
+    return Meteor.user().profile.info.qualifications;
+  },
+  specialty: function(){
+   return Meteor.user().profile.info.specialty;
+  },
+  address: function(){
+    return Meteor.user().profile.info.clinicAddress;
+  }
+});
