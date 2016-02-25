@@ -24,12 +24,14 @@ Template.register.events({
      var type = $('input:radio[name="group1"]:checked').val() ;
 
 
+
      var options = {
      first_name: first,
      last_name: last,
      mobile_no: mobile,
      dob: date,
-     type: type
+     type: type,
+     prescriptions: []
      }
 
 

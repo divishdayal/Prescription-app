@@ -29,18 +29,16 @@ Template.patientProfile.helpers({
   isRegmed: function(){
     return Meteor.user().profile.patient.regmed;
   },
-  textarea1: function(){
-    return Meteor.user().profile.patient.textArea1;
+  textArea1: function(){
+    var string = Meteor.user().profile.patient.textArea1;
+    return string;
   },
-  textarea2: function(){
-    return Meteor.user().profile.patient.textArea2;
+  textArea2: function(){
+    var string = Meteor.user().profile.patient.textArea2;
+    return string;
   }
 });
 
-Template.patientProfile.onRendered = function(){
-  var string = Meteor.user().profile.patient.textArea1;
-  $("#textArea1").val(string);
-};
 
 Template.patientProfile.events({
  'submit #patient-form': function(e, template) {
@@ -111,6 +109,7 @@ Template.patientProfile.events({
               }
 
     var textArea1 = $(e.target).find('[name=textArea1]').val();
+    //console.log(textArea1);
     var textArea2 = $(e.target).find('[name=textArea2]').val();
 
 
@@ -128,6 +127,7 @@ Template.patientProfile.events({
      textArea1: textArea1,
      textArea2: textArea2
      }
+     //console.log(patient.textArea1);
      Meteor.users.update( { _id: Meteor.userId() }, {$set: {"profile.patient" : patient}});
    	 Meteor.users.update( { _id: Meteor.userId() }, {$set: {"profile.completed" : true}});
 

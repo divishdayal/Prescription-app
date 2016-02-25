@@ -271,9 +271,9 @@ $(document).ready(function(){
 <template name="patient">
 		          <tr>
 		            <!-- <td></td> -->
-		            <td>{{this.patient_name}}</td>
+		            <td>{{this.fname}} {{this.lname}}</td>
 		            <td>{{this.date}}</td>
 		            <td>{{this.disease}}</td>
-		            <td><a href = "#">Open</a></td>
+		            <td><a href = "/show_prescription/{{_id}}">Open</a></td>
 		          </tr>
 </template>
