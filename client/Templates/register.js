@@ -1,5 +1,5 @@
 Template.register.events({
- 'submit #register-form': function(e, template) {
+ 'submit #register-form': function(e) {
    e.preventDefault();
 
 //    var flag = 0;
@@ -31,9 +31,6 @@ Template.register.events({
      dob: date,
      type: type
      }
-  //  if (!$(e.target).find('[name=capId]').val().match($regexname))
-  //      throwError("wrong id !");
-  //  else {
 
 
 
@@ -47,26 +44,27 @@ Template.register.events({
          } else {
            console.log("account created");
 
-
+           if(Meteor.user().profile.type === "doctor")
+             Router.go('/doctor_registration');
+           else {
+               Router.go('/patient_profile')
+           }
            // Success. Account has been created and the user
            // has logged in successfully.
+
          }
 
        });
 
 
 
-        if(Meteor.user().profile.type === "doctor")
-          Router.go('/doctor_registration');
-        else {
-            Router.go('/patient_profile')
-        }
 
 
 
 
+        return false;
  }
-//}
+
 
 
 

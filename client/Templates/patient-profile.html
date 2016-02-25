@@ -61,10 +61,17 @@
    						font-weight: 500;"> Asthma</span>
    						</div>
    					<div class = "col s3">
-				      	<input type="radio" id="asthma-yes" name = "asthma" />
+							{{#if isAsthma}}
+				      	<input type="radio" id="asthma-yes" value="yes" name = "asthma" checked/>
 	      				<label for="asthma-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="asthma-no" name = "asthma" checked />
+	      				<input type="radio" id="asthma-no"  value="no" name = "asthma"  />
 	      				<label for="asthma-no">No</label>
+							{{else}}
+								<input type="radio" id="asthma-yes" value="yes" name = "asthma" />
+								<label for="asthma-yes" STYLE = "padding-right: 10px;">Yes</label>
+								<input type="radio" id="asthma-no" value="no" name = "asthma" checked />
+								<label for="asthma-no">No</label>
+							{{/if}}
 
       				</div>
 			      </div>
@@ -74,11 +81,17 @@
    						font-weight: 500;"> Diabetes</span>
    						</div>
    					<div class = "col s3">
-				      	<input type="radio" id="diabetes-yes" name = "diabetes" />
-	      				<label for="diabetes-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="diabetes-no" name = "diabetes" checked />
+							{{#if isDiabetes}}
+				      	<input type="radio" id="diabetes-yes" value="yes" name = "diabetes" checked/>
+	      				<label for="diabetes-yes" STYLE = "padding-right: 10px;" >Yes</label>
+	      				<input type="radio" id="diabetes-no" value="no" name = "diabetes"  />
 	      				<label for="diabetes-no">No</label>
-
+							{{else}}
+								<input type="radio" id="diabetes-yes" value = "yes" name = "diabetes" />
+								<label for="diabetes-yes" STYLE = "padding-right: 10px;">Yes</label>
+								<input type="radio" id="diabetes-no" value="no" name = "diabetes" checked />
+								<label for="diabetes-no">No</label>
+							{{/if}}
       				</div>
 			      </div>
 			      <div class = "row" style = "margin-top:20px;">
@@ -87,10 +100,17 @@
    						font-weight: 500;"> Heart Problems</span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="HeartProblems-yes" name = "HeartProblems" />
+							{{#if isHeart}}
+				      	<input type="radio" value="yes" id="HeartProblems-yes" name = "HeartProblems" checked/>
 	      				<label for="HeartProblems-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="HeartProblems-no" name = "HeartProblems" checked />
+	      				<input type="radio" value="no" id="HeartProblems-no" name = "HeartProblems"  />
 	      				<label for="HeartProblems-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="HeartProblems-yes" name = "HeartProblems" />
+	      				<label for="HeartProblems-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="HeartProblems-no" name = "HeartProblems" checked />
+	      				<label for="HeartProblems-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -100,10 +120,17 @@
    						font-weight: 500;"> Periods of unconsciousness/dizzyness</span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="dizzyness-yes" name = "dizzyness" />
+							{{#if isDizzy}}
+				      	<input type="radio" value="yes" id="dizzyness-yes" name = "dizzyness" checked/>
 	      				<label for="dizzyness-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="dizzyness-no" name = "dizzyness" checked />
+	      				<input type="radio" value="no" id="dizzyness-no" name = "dizzyness"  />
 	      				<label for="dizzyness-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="dizzyness-yes" name = "dizzyness" />
+	      				<label for="dizzyness-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="dizzyness-no" name = "dizzyness" checked />
+	      				<label for="dizzyness-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -113,10 +140,17 @@
    						font-weight: 500;"> Joint or bone problems </span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="Joint-yes" name = "Joint" />
+							{{#if isJoint}}
+				      	<input type="radio" value="yes" id="Joint-yes" name = "Joint" checked/>
 	      				<label for="Joint-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="Joint-no" name = "Joint" checked />
+	      				<input type="radio" value="no" id="Joint-no" name = "Joint"  />
 	      				<label for="Joint-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="Joint-yes" name = "Joint" />
+	      				<label for="Joint-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="Joint-no" name = "Joint" checked />
+	      				<label for="Joint-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -126,10 +160,17 @@
    						font-weight: 500;"> Epilepsy </span>
    					</div>
    						<div class = "col s3">
-				      	<input type="radio" id="Epilepsy-yes" name = "Epilepsy" />
+								{{#if isEpilepsy}}
+				      	<input type="radio" value="yes" id="Epilepsy-yes" name = "Epilepsy" checked/>
 	      				<label for="Epilepsy-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="Epilepsy-no" name = "Epilepsy" checked />
+	      				<input type="radio" value="no" id="Epilepsy-no" name = "Epilepsy"  />
 	      				<label for="Epilepsy-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="Epilepsy-yes" name = "Epilepsy" />
+	      				<label for="Epilepsy-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="Epilepsy-no" name = "Epilepsy" checked />
+	      				<label for="Epilepsy-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -139,10 +180,17 @@
    						font-weight: 500;"> Chest pains </span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="Chest-yes" name = "Chest" />
+							{{#if isChest}}
+				      	<input type="radio" value="yes" id="Chest-yes" name = "Chest" checked/>
 	      				<label for="Chest-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="Chest-no" name = "Chest" checked />
+	      				<input type="radio" value="no" id="Chest-no" name = "Chest"  />
 	      				<label for="Chest-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="Chest-yes" name = "Chest" />
+	      				<label for="Chest-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="Chest-no" name = "Chest" checked />
+	      				<label for="Chest-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -152,10 +200,17 @@
    						font-weight: 500;"> High blood pressure </span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="BP-yes" name = "BP" />
+							{{#if isBp}}
+				      	<input type="radio" value="yes" id="BP-yes" name = "BP" checked/>
 	      				<label for="BP-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="BP-no" name = "BP" checked />
+	      				<input type="radio" value="no" id="BP-no" name = "BP"  />
 	      				<label for="BP-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="BP-yes" name = "BP" />
+	      				<label for="BP-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="BP-no" name = "BP" checked />
+	      				<label for="BP-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
@@ -165,30 +220,39 @@
    						font-weight: 500;"> Are you regularly taking any medication? </span>
    					</div>
    					<div class = "col s3">
-				      	<input type="radio" id="regmed-yes" name = "regmed" />
+							{{#if isRegmed}}
+				      	<input type="radio" value="yes" id="regmed-yes" name = "regmed" checked/>
 	      				<label for="regmed-yes" STYLE = "padding-right: 10px;">Yes</label>
-	      				<input type="radio" id="regmed-no" name = "regmed" checked />
+	      				<input type="radio" value="no" id="regmed-no" name = "regmed"  />
 	      				<label for="regmed-no">No</label>
+								{{else}}
+								<input type="radio" value="yes" id="regmed-yes" name = "regmed" />
+	      				<label for="regmed-yes" STYLE = "padding-right: 10px;">Yes</label>
+	      				<input type="radio" value="no" id="regmed-no" name = "regmed" checked />
+	      				<label for="regmed-no">No</label>
+								{{/if}}
 
       				</div>
 			      </div>
 			      <div class="row">
 			        <div class="input-field col s11" style = "margin-left: 20px;">
-			          <textarea id="textarea1" class="materialize-textarea"></textarea>
+			          <input type="text" name = "textArea1" id="textArea1"  class="materialize-textarea" >
 			          <label for="textarea1">If ‘Yes’, what is it and what is it for?</label>
 			        </div>
 			      </div>
 			      <div class="row">
 			        <div class="input-field col s11" style = "margin-left: 20px;">
-			          <textarea id="textarea2" class="materialize-textarea"></textarea>
+			          <input type="text" name = "textArea2" id="textArea2" value="{{textArea2}}" class="materialize-textarea" >
 			          <label for="textarea2">Known Allergies (Please State)</label>
 			        </div>
 			      </div>
+
+						<button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
+	    			margin-bottom: 20px;">Submit
+	    				<i class="material-icons right">send</i>
+	 				 </button>
 			    </form>
-			    <button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 76.7%;
-    			margin-bottom: 20px;">Submit
-    				<i class="material-icons right">send</i>
- 				 </button>
+
 
   			</div>
 
@@ -206,16 +270,16 @@
 
 
     <script type="text/javascript">
-$(document).ready(function(){
-	$(".button-collapse").sideNav();
-	 $('.modal-trigger').leanModal();
-	 $('.datepicker').pickadate({
-    selectMonths: true,
-    selectYears: 200
-  });
-
-
-});
+// $(document).ready(function(){
+// 	$(".button-collapse").sideNav();
+// 	 $('.modal-trigger').leanModal();
+// 	 $('.datepicker').pickadate({
+//     selectMonths: true,
+//     selectYears: 200
+//   });
+//
+//
+// });
 
 
 </script>

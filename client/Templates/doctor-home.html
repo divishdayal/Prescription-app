@@ -10,7 +10,7 @@
 			 <table style = "margin-top:50px;" class = "bordered highlight centered responsive-table white z-depth-3">
 		        <thead>
 		          <tr>
-		              <th data-field="s.no">S.no</th>
+		              <!-- <th data-field="s.no">S.no</th> -->
 		              <th data-field="name">Patient Name</th>
 		              <th data-field="date">Date</th>
 		              <th data-field="disease">Disease</th>
@@ -20,13 +20,13 @@
 
 		        <tbody>
 							{{#each patients}}
-								{{> doc_table_row}}
+								{{> patient}}
 							{{/each}}
 
 		        </tbody>
 		     </table>
 
-
+				 <form id="new_prescription">
 		     <!-- Modal Structure -->
 				  <div id="modal1" class="modal" style = "margin-top:7%">
 				    <div class="content">
@@ -44,7 +44,8 @@
 				  </div>
 
 				 <div id="modal2" class="modal" style = "width:85%;max-height:80%">
-				    <div class = "section-body">
+					 {{> prescription}}
+				    <!-- <div class = "section-body">
 			<div class = "prescription-body card">
 				<div class = "doctor-info">
 					<div class = "col s12 m6">
@@ -235,9 +236,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 				</div>
+				</form>
 			</div>
 
 	</section>
@@ -266,12 +268,12 @@ $(document).ready(function(){
 </body>
 </template>
 
-<template name="doc_table_row">
+<template name="patient">
 		          <tr>
-		            <td>1</td>
-		            <td>Divakar</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
+		            <!-- <td></td> -->
+		            <td>{{this.patient_name}}</td>
+		            <td>{{this.date}}</td>
+		            <td>{{this.disease}}</td>
 		            <td><a href = "#">Open</a></td>
 		          </tr>
 </template>

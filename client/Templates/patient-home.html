@@ -5,11 +5,11 @@
 	<section>
 
 		<div class = "section-body container">
-			<h3 style = "margin-top:50px;">Welcome,<span class="patient-name">Divakar Verma</span></h3>
+			<h3 style = "margin-top:50px;">Welcome,<span class="patient-name">{{name}}</span></h3>
 			 <table style = "margin-top:50px;" class = "bordered highlight centered responsive-table white z-depth-3">
 		        <thead>
 		          <tr>
-		              <th data-field="s.no">S.no</th>
+		              <!-- <th data-field="s.no">S.no</th> -->
 		              <th data-field="name">Doctor's Name</th>
 		              <th data-field="date">Date</th>
 		              <th data-field="disease">Disease</th>
@@ -20,39 +20,14 @@
 		        <tbody>
 		          <tr>
 		            <td>1</td>
-		            <td>Dr.Sony Mishra</td>
+		            <td>Dr.Sony Mishra(testing)</td>
 		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
+		            <td>Lovaria(testing)</td>
 		            <td><a href = "#">Open</a></td>
 		          </tr>
-		          <tr>
-		            <td>2</td>
-		            <td>Dr.Sony Mishra</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>3</td>
-		            <td>Dr.Sony Mishra</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>4</td>
-		            <td>Dr.Sony Mishra</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
-		          <tr>
-		            <td>5</td>
-		            <td>Dr.Sony Mishra</td>
-		            <td>12-Dec-2015</td>
-		            <td>Lovaria</td>
-		            <td><a href = "#">Open</a></td>
-		          </tr>
+							{{#each records}}
+								{{> record}}
+							{{/each}}
 
 		        </tbody>
 		     </table>
@@ -83,4 +58,14 @@ $(document).ready(function(){
 </script>
 
 </body>
+</template>
+
+<template name="record">
+	<tr>
+		<!-- <td>{{sno}}</td> -->
+		<td>{{this.doc}}</td>
+		<td>{{this.date}}</td>
+		<td>{{this.disease}}</td>
+		<td><a href = "#">Open</a></td>
+	</tr>
 </template>

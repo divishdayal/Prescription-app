@@ -8,8 +8,8 @@
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
 
-      <li><a href="patient-account.html">Your Medical Records</a></li>
-      <li><a href="patient-details.html">Medical Details</a></li>
+      <li><a href="{{pathFor 'patient_home'}}">Your Medical Records</a></li>
+      <li><a href="{{pathFor 'patient_profile'}}">Medical Details</a></li>
       <li><form id="logout-form" role="form">
     <button type="submit" class="button-logout">Log Out</button>
   </form></li>
@@ -17,8 +17,8 @@
     </ul>
     <ul class="side-nav" id="mobile-demo">
 
-      <li><a href="patient-account.html">Your Medical Records</a></li>
-      <li><a href="collapsible.html">Medical Details</a></li>
+      <li><a href="{{pathFor 'patient_home'}}">Your Medical Records</a></li>
+      <li><a href="{{pathFor 'patient_profile'}}">Medical Details</a></li>
       <li><form id="logout-form" role="form">
     <button type="submit" class="button-logout">Log Out</button>
   </form></li>
@@ -34,7 +34,7 @@
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><a class = "modal-trigger" href="#modal1" >New Prescription</a></li>
-      <li><a href="doctor's-account.html">Your Consultations</a></li>
+      <li><a href="{{pathFor 'doctor_home'}}">Your Consultations</a></li>
       <li><a href="{{pathFor 'doctor_registration'}}">Edit Profile</a></li>
       <li><form id="logout-form" role="form">
     <button type="submit" class="button-logout">Log Out</button>
@@ -43,7 +43,7 @@
     </ul>
     <ul class="side-nav" id="mobile-demo">
       <li><a class = "modal-trigger" href="#modal1">New Prescription</a></li>
-      <li><a href="doctor's-account.html">Your Consultations</a></li>
+      <li><a href="{{pathFor 'doctor_home'}}">Your Consultations</a></li>
       <li><a href="{{pathFor 'doctor_registration'}}">Edit Profile</a></li>
       <li><form id="logout-form" role="form">
     <button type="submit" class="button-logout">Log Out</button>

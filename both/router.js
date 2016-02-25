@@ -15,12 +15,12 @@ Router.route('/register', {name:'register'});
 
 var isReady =  function() {
     if (!this.ready() || Meteor.loggingIn()) {
-       //console.log('not ready')
+       console.log('not ready')
       this.render('loading');
     }else{
       this.next();
-       //console.log('ready')
+       console.log('ready')
     }
   }
 
-  Router.onBeforeAction(isReady);
+  //Router.onBeforeAction(isReady);

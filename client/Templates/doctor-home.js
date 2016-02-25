@@ -3,6 +3,6 @@ Template.doctorHome.helpers({
     return Meteor.user().profile.name;
   },
   patients: function() {
-    //return Meteor.users.find();
+    return Meteor.user().profile.records;
   }
 });
