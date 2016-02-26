@@ -20,6 +20,10 @@ Template.prescription.helpers({
   },
   address: function(){
     return Meteor.user().profile.info.clinicAddress;
+  },
+  url: function(){
+    var id = Iron.Location.get().path.substring(14);
+    return '/medical_history/' + id;
   }
 });
 
@@ -91,7 +95,7 @@ Template.prescription.events({
   console.log(id);
   var p = {id: id};
   Prescriptions.update({_id:id}, {$set:{
-    "info": info
+    "info": info, "completed": true
   }});
 
   Meteor.users.update({_id: Meteor.userId()},  { $push: { "profile.prescriptions": p } });

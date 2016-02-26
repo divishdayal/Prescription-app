@@ -9,11 +9,17 @@ Router.route('/', {name:'home'});
 Router.route('/doctor_home', {name:'doctor_home'});
 Router.route('/doctor_registration', {name:'doctor_registration'});
 Router.route('/patient_home', {name:'patient_home'});
+Router.route('/medical_history/:_id', {name:'medical_history'});
 Router.route('/patient_profile', {name:'patient_profile'});
 Router.route('/prescription/:id', {name:'prescription' });
 Router.route('/phone_prescription', {name:'phone_prescription'});
 Router.route('/show_prescription/:_id', {
   name: 'show_prescription',
+  data: function() { return Prescriptions.findOne(this.params._id); }
+});
+
+Router.route('/show_prescription_view/:_id', {
+  name: 'show_prescription_view',
   data: function() { return Prescriptions.findOne(this.params._id); }
 });
 Router.route('/register', {name:'register'});

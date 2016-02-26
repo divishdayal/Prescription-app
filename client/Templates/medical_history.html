@@ -1,0 +1,45 @@
+<template name="medicalHistory">
+  {{> medicalHistoryNav}}
+  <div class = "section-body container">
+    <!-- <h3 style = "margin-top:50px;">Welcome,<span class="patient-name">{{name}}</span></h3> -->
+     <table style = "margin-top:50px;" class = "bordered highlight centered responsive-table white z-depth-3">
+          <thead>
+            <tr>
+                <!-- <th data-field="s.no">S.no</th> -->
+                <th data-field="name">Doctor's Name</th>
+                <th data-field="date">Date</th>
+                <th data-field="disease">Disease</th>
+                <th data-field="open-prescription">Prescription</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- <tr>
+              <td>Dr.Sony Mishra(testing)</td>
+              <td>12-Dec-2015</td>
+              <td>Lovaria(testing)</td>
+              <td><a href = "#">Open</a></td>
+            </tr> -->
+            {{#each records}}
+              {{> row}}
+            {{/each}}
+
+          </tbody>
+       </table>
+
+
+
+
+  </div>
+
+</template>
+
+<template name="row">
+	<tr>
+		<!-- <td>{{sno}}</td> -->
+		<td>{{this.info.doc}}</td>
+		<td>{{this.info.date}}</td>
+		<td>{{this.info.disease}}</td>
+		<td><a href = "/show_prescription_view/{{_id}}" target="_blank">Open</a></td>
+	</tr>
+</template>
