@@ -22,7 +22,7 @@
 				<div class = "prescription-body row">
 					<div class = "diagnosed-disease col s3">
 
-						<input name="prescribed-disease" type="text" data-provide="typeahead" placeholder = "Diagnosed Disease" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details">
+						<input name="prescribed-disease typeahead" type="text" data-provide="typeahead"  data-source='["Malaria", "Hiv", "Alzheimer","Arthritis","Bronchitis","TuberCulosis","Gastic Syndrome","Rabies","Dengue","Polio"]' placeholder = "Diagnosed Disease" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details">
 						<br>
 						<br>
 						<br>
@@ -62,7 +62,7 @@
 							<div class = "medicine row">
 								<div class = "row">
 									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
-		          						<input name="med1" id="medicine-1" type="text" class="validate" >
+		          						<input name="med1" id="medicine-1" type="text" class="validate" data-provide = "typeahead" data-source='["Aspirin", "Crocin", "Vicks","Paracetamol","D-cold Total","Corex","Digene","Benadryl","Pentocid","Becosule"]'>
 		          						<label for="medicine-1" title="Details of Drug">Medicine Name</label>
 
 		       						 </div>
@@ -98,7 +98,7 @@
 									<div class = "medicine row">
 									  <div class = "row">
 									    <div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
-									            <input name="med2" id="medicine-1" type="text" class="validate" >
+									            <input name="med2" id="medicine-1" type="text" class="validate" data-provide = "typeahead" data-source='["Aspirin", "Crocin", "Vicks","Paracetamol","D-cold Total","Corex","Digene","Benadryl","Pentocid","Becosule"]'>
 									            <label for="medicine-1" title="Details of Drug">Medicine Name</label>
 
 									         </div>
