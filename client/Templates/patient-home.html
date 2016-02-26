@@ -62,9 +62,9 @@ $(document).ready(function(){
 <template name="record">
 	<tr>
 		<!-- <td>{{sno}}</td> -->
-		<td>{{this.doc}}</td>
-		<td>{{this.date}}</td>
-		<td>{{this.disease}}</td>
+		<td>{{this.info.doc}}</td>
+		<td>{{this.info.date}}</td>
+		<td>{{this.info.disease}}</td>
 		<td><a href = "/show_prescription/{{_id}}">Open</a></td>
 	</tr>
 </template>

@@ -6,7 +6,7 @@
 	<section>
 
 		<div class = "section-body container">
-			<h3 style = "margin-top:50px;">Welcome,<span class="doctor's name">{{name}}</span></h3>
+			<h3 style = "margin-top:50px;">Welcome, <span class="doctor's name">{{name}}</span></h3>
 			 <table style = "margin-top:50px;" class = "bordered highlight centered responsive-table white z-depth-3">
 		        <thead>
 		          <tr>
@@ -271,9 +271,9 @@
 <template name="patient">
 		          <tr>
 		            <!-- <td></td> -->
-		            <td>{{this.fname}} {{this.lname}}</td>
-		            <td>{{this.date}}</td>
-		            <td>{{this.disease}}</td>
+		            <td>{{this.info.fname}} {{this.info.lname}}</td>
+		            <td>{{this.info.date}}</td>
+		            <td>{{this.info.disease}}</td>
 		            <td><a href = "/show_prescription/{{_id}}">Open</a></td>
 		          </tr>
 </template>

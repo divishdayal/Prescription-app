@@ -28,33 +28,33 @@
   				<div class = "prescription-body row">
   					<div class = "diagnosed-disease col s3">
 
-  						<input value="{{disease}}" id="prescribed-disease" name="prescribed-disease" type="text" data-provide="typeahead" placeholder = "none" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details" disabled>
+  						<input value="{{info.disease}}" id="prescribed-disease" name="prescribed-disease" type="text" data-provide="typeahead" placeholder = "none" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Disease Details" disabled>
               <label class="active" for="prescribed-disease">Disease</label>
               <br>
   						<br>
   						<br>
-  						<input value="{{lab_tests}}" id="lab-test" type = "text" name="lab-test" placeholder = "none" disabled>
+  						<input value="{{info.lab_tests}}" id="lab-test" type = "text" name="lab-test" placeholder = "none" disabled>
               <label class="active" for="lab-test">Lab tests recommended</label>
   					</div>
   					<div class = "vertical-divider col s1"></div>
   					<div class = "prescription-main-body col s8">
   						<div class = "patient-info row">
   							<div class="input-field col s6">
-            						<input value="{{fname}}" name="f_name" id="first_name" type="text" class="validate" disabled>
+            						<input value="{{info.fname}}" name="f_name" id="first_name" type="text" class="validate" disabled>
            						 <label class="active" for="first_name">First Name</label>
 
           					</div>
           					<div class="input-field col s6">
-            						<input value="{{lname}}" name="l_name" id="last_name" type="text" class="validate" disabled>
+            						<input value="{{info.lname}}" name="l_name" id="last_name" type="text" class="validate" disabled>
            						 <label class="active" for="last_name">Last Name</label>
 
           					</div>
           					<div class="input-field col s2">
-            						<input value="{{age}}" name="age" id="age" type="text" class="validate" disabled>
+            						<input value="{{info.age}}" name="age" id="age" type="text" class="validate" disabled>
            						 <label class="active" for="age">Age</label>
           					</div>
           					<div class="input-field col s2">
-            						<input value="{{weight}}" name="weight" id="weight" type="text" class="validate" disabled>
+            						<input value="{{info.weight}}" name="weight" id="weight" type="text" class="validate" disabled>
            						 <label class="active" for="weight">Weight</label>
           					</div>
 
@@ -64,7 +64,7 @@
   							<div class = "medicine row">
   								<div class = "row">
   									<div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
-  		          						<input name="med1" id="medicine-1" type="text" class="validate" value="{{med1_name}}"  disabled>
+  		          						<input name="med1" id="medicine-1" type="text" class="validate" value="{{info.med1_name}}"  disabled>
   		          						<label class="active" for="medicine-1" title="Details of Drug">Medicine Name</label>
 
   		       						 </div>
@@ -100,7 +100,7 @@
   									<div class = "medicine row">
   									  <div class = "row">
   									    <div class="input-field col s6 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Medicine Details">
-  									            <input name="med2" id="medicine-1" type="text" class="validate" value="{{med2_name}}" disabled>
+  									            <input name="med2" id="medicine-1" type="text" class="validate" value="{{info.med2_name}}" disabled>
   									            <label class="active" for="medicine-1" title="Details of Drug">Medicine Name</label>
 
   									         </div>

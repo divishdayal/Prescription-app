@@ -4,7 +4,7 @@ Template.prescription.onRendered(function () {
   	$(".button-collapse").sideNav();
   	$(".dropdown-button").dropdown();
   	$('.tooltipped').tooltip({delay: 50});
-  	$('.vertical-divider.col.s1').height($('.prescribed-medication').height() + 160);
+  	$('.vertical-divider.col.s1').height($('.prescribed-medication').height() + 180);
 
 });
 
@@ -48,7 +48,7 @@ Template.prescription.events({
     //   	return;}
     var date = new Date();
     var dateNew = moment(date).format("DD.MM.YYYY");
-    var phone = $(e.target).find('[name=phone]').val();
+    //var phone = $(e.target).find('[name=phone]').val();
 		var info = {
       doc: ("Dr." + Meteor.user().profile.first_name + " " + Meteor.user().profile.last_name),
 			fname: $(e.target).find('[name=f_name]').val(),
@@ -80,13 +80,20 @@ Template.prescription.events({
       med2_evening: $("#med2-evening").is(':checked'),
       med2_group1: $(e.target).find('[name=med2-group1]').val(),
       med2_group2: $(e.target).find('[name=med2-group2]').val(),
-      phone: phone
+      //phone: phone
 
 	};
 
-	var p_id = Prescriptions.insert(info);
-  console.log(p_id);
-  var p = {id: p_id};
+	// var p_id = Prescriptions.insert(info);
+  // console.log(p_id);
+  // var p = {id: p_id};
+  var id = Iron.Location.get().path.substring(14);
+  console.log(id);
+  var p = {id: id};
+  Prescriptions.update({_id:id}, {$set:{
+    "info": info
+  }});
+
   Meteor.users.update({_id: Meteor.userId()},  { $push: { "profile.prescriptions": p } });
   console.log("updated doc");
   // var user = Meteor.users.findOne({"profile.mobile_no" : phone});

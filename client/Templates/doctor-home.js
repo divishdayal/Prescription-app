@@ -1,6 +1,6 @@
 Template.doctorHome.helpers({
   name: function(){
-    return Meteor.user().profile.name;
+    return "Dr. " + Meteor.user().profile.first_name + " " + Meteor.user().profile.last_name;
   },
   patients: function() {
     var pres_ids = Meteor.user().profile.prescriptions;

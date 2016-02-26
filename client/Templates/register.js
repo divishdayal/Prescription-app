@@ -13,7 +13,7 @@ Template.register.events({
      console.log("error");
      return;}
 
-     var $regexname=/\d\d\d\d\d\d\d\d\d\d/;
+     //var $regexname=/\d\d\d\d\d\d\d\d\d\d/;
      var first= $(e.target).find('[name=first]').val();
      var last= $(e.target).find('[name=last]').val();
      var username= $(e.target).find('[name=username]').val();

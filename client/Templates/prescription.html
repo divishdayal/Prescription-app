@@ -49,10 +49,10 @@
           						<input name="weight" id="weight" type="text" class="validate">
          						 <label for="weight">Weight</label>
         					</div>
-									<div class="input-field col s3">
+									<!-- <div class="input-field col s3">
           						<input name="phone" id="phone" type="number" class="validate inputR">
          						 <label for="weight">Phone</label>
-        					</div>
+        					</div> -->
 
 						</div>
 						<div class="prescription-main-body-divider divider red lighten-2"></div>
@@ -199,7 +199,10 @@
 	      					</div> -->
 
 	      				<!-- <a class="btn-floating waves-effect waves-light red" id = "add-med-field"><i class="material-icons">add</i></a> -->
-								<button class="btn waves-effect waves-light red lighten-2" type="submit" name="action" style = "left: 10%;
+								<a class="btn waves-effect waves-light red lighten-2 left" href="{{pathFor 'doctor_home'}}" style = "
+								margin-bottom: 20px;margin-top:0%;">Discard
+							</a>
+								<button class="btn waves-effect waves-light red lighten-2 right" type="submit" name="action" style = "
 								margin-bottom: 20px;margin-top:0%;">Submit
 							 </button>
 						</div>

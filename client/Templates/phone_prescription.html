@@ -1,0 +1,32 @@
+<template name="phonePrescription">
+{{> nav}}
+  <section>
+
+    <div class = "section-body container">
+      <div class="row z-depth-3" style = "background-color:white;margin-top:50px;">
+          <form class="col s12" style = "padding: 0px 25px 0px 25px;" id="phone-form">
+            <div class="row" style = "margin-top:20px;">
+              <div class="content">
+              <h4 style = "padding-left: 5px;">New Prescription</h4>
+
+                <div class="input-field" style = "margin-top: 2rem;">
+                  <input id="mobile-no" name ="mobile_no" type="text" class="validate">
+                    <label for="mobile-no">Patient's Mobile Number</label>
+                   </div>
+            </div>
+            <div class="modal-footer" style = "border-top: 0px;">
+              <button type="submit" id = "prescription-trigger" class=" modal-action modal-close waves-effect waves-green btn red lighten-2 modal-trigger">Create New Thread</button>
+
+            </div>
+            </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+  </section>
+
+</template>

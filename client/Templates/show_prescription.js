@@ -27,67 +27,67 @@ Template.prescriptionDisabled.helpers({
     return Meteor.user().profile.clinicAddress;
   },
   med1Morning: function(){
-    if(this.med1_morning)
+    if(this.info.med1_morning)
       return "checked";
   },
   med1Afternoon: function(){
-    if(this.med1_afternoon)
+    if(this.info.med1_afternoon)
       return "checked";
   },
   med1Evening: function(){
-    if(this.med1_evening)
+    if(this.info.med1_evening)
       return "checked";
   },
   med2Morning: function(){
-    if(this.med2_morning)
+    if(this.info.med2_morning)
       return "checked";
   },
   med2Afternoon: function(){
-    if(this.med2_afternoon)
+    if(this.info.med2_afternoon)
       return "checked";
   },
   med2Evening: function(){
-    if(this.med1_afternoon)
+    if(this.info.med1_afternoon)
       return "checked";
   },
   med1am: function(){
-    if(this.med1_am)
+    if(this.info.med1_am)
       return "checked";
   },
   med1bm: function(){
-    if(this.med1_bm)
+    if(this.info.med1_bm)
       return "checked";
   },
   med2am: function(){
-    if(this.med2_am)
+    if(this.info.med2_am)
       return "checked";
   },
   med2bm: function(){
-    if(this.med2_bm)
+    if(this.info.med2_bm)
       return "checked";
   },
   med11: function(){
-    if(this.med1_1)
+    if(this.info.med1_1)
       return "checked";
   },
   med12: function(){
-    if(this.med1_2)
+    if(this.info.med1_2)
       return "checked";
   },
   med13: function(){
-    if(this.med1_3)
+    if(this.info.med1_3)
       return "checked";
   },
   med21: function(){
-    if(this.med2_1)
+    if(this.info.med2_1)
       return "checked";
   },
   med22: function(){
-    if(this.med2_2)
+    if(this.info.med2_2)
       return "checked";
   },
   med23: function(){
-    if(this.med2_3)
+    if(this.info.med2_3)
       return "checked";
   }
 });
