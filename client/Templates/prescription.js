@@ -39,7 +39,9 @@ Template.prescription.events({
     //   	return;}
     var date = new Date();
     var dateNew = moment(date).format("DD.MM.YYYY");
+    var phone = $(e.target).find('[name=phone]').val();
 		var info = {
+      doc: ("Dr." + Meteor.user().profile.first_name + " " + Meteor.user().profile.last_name),
 			fname: $(e.target).find('[name=f_name]').val(),
       lname: $(e.target).find('[name=l_name]').val(),
       date: dateNew,
@@ -68,13 +70,22 @@ Template.prescription.events({
       med2_afternoon: $("#med2-afternoon").is(':checked'),
       med2_evening: $("#med2-evening").is(':checked'),
       med2_group1: $(e.target).find('[name=med2-group1]').val(),
-      med2_group2: $(e.target).find('[name=med2-group2]').val()
+      med2_group2: $(e.target).find('[name=med2-group2]').val(),
+      phone: phone
+
 	};
 
 	var p_id = Prescriptions.insert(info);
   console.log(p_id);
   var p = {id: p_id};
   Meteor.users.update({_id: Meteor.userId()},  { $push: { "profile.prescriptions": p } });
+  console.log("updated doc");
+  // var user = Meteor.users.findOne({"profile.mobile_no" : phone});
+  // var array = user.profile.prescriptions;
+  // array.push(p);
+  // var obj = {array : array};
+  // Meteor.users.update({ _id : user._id}, { $set: { "profile.prescriptions": obj }});
+  //   console.log("updated patient");
 
 
 

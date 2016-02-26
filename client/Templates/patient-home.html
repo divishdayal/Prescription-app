@@ -18,13 +18,12 @@
 		        </thead>
 
 		        <tbody>
-		          <tr>
-		            <td>1</td>
+		          <!-- <tr>
 		            <td>Dr.Sony Mishra(testing)</td>
 		            <td>12-Dec-2015</td>
 		            <td>Lovaria(testing)</td>
 		            <td><a href = "#">Open</a></td>
-		          </tr>
+		          </tr> -->
 							{{#each records}}
 								{{> record}}
 							{{/each}}
@@ -66,6 +65,6 @@ $(document).ready(function(){
 		<td>{{this.doc}}</td>
 		<td>{{this.date}}</td>
 		<td>{{this.disease}}</td>
-		<td><a href = "#">Open</a></td>
+		<td><a href = "/show_prescription/{{_id}}">Open</a></td>
 	</tr>
 </template>
