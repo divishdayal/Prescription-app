@@ -19,14 +19,23 @@ Template.prescription.helpers({
     return Meteor.user().profile.info.specialty;
   },
   address: function(){
-    return Meteor.user().profile.clinicAddress;
+    return Meteor.user().profile.info.clinicAddress;
   }
 });
 
 Template.prescription.events({
   'submit #prescription-form': function(e) {
 		e.preventDefault();
-
+    var flag = 0;
+    $(".inputR").each(function() {
+   if(flag==0 && $(this).val() === ""){
+    throwError("Empty Fields! ");
+    flag=1;
+  }
+ });
+    if(flag==1){
+      console.log("error");
+      return;}
 		// var flag = 0;
     // 	$(".inputT").each(function() {
    // 			if(flag==0 && $(this).val() === ""){
