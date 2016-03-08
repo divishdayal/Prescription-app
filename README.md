@@ -17,10 +17,6 @@ Patients side product includes :
 
 -> view all previous prescriptions
 
-
-![doc pic](https://drive.google.com/file/d/0B1aeBH6hlXAlU0xiWElDV2g1aGs/preview "Logo Title Text 1")
-
-![doc pic](https://drive.google.com/file/d/0B1aeBH6hlXAlWEVtRFpPTENIeW8/view?usp=sharing "Logo Title Text 1")
-
-![doc pic](https://drive.google.com/file/d/0B1aeBH6hlXAlN3N2bTRDM29jVWc/view?usp=sharing "Logo Title Text 1")
+screenshots : 
+https://drive.google.com/folderview?id=0B1aeBH6hlXAlNkV3dHBjYTBSMG8&usp=sharing
 
